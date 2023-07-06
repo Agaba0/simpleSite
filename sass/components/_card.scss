@@ -1,0 +1,50 @@
+.card {
+  -moz-perspective: 150rem;
+  perspective: 150rem;
+  height: 50rem;
+  position: relative;
+
+  .card-side {
+    height: 50rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;  
+    border-radius: 0.7rem;
+
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+
+
+    //THREE FLIP IMAGE COLOR
+    &_Fimage-1 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-secondary-light,
+        $color-secondary
+      );
+    }
+
+    &_Bimage-1 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-tertiary-light,
+        $color-tertiary
+      );
+    }
+
+    &_back {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &-side_front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &-side_back {
+    transform: rotateY(0);
+  }
+}

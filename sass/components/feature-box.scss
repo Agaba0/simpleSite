@@ -1,0 +1,13 @@
+.feature-box{
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    border-radius: 3px;
+    text-align: center;
+    background-color: rgba($color-white, .8);
+    box-shadow: 0 1.5rem .4rem rgba($color-black, .15) ;
+
+    &:hover{
+        transform: translateY(-.5rem) scale(1.05);
+        box-shadow: 0 1.7rem .7rem rgba($color-black, .15) ;
+    }
+}

@@ -1,0 +1,27 @@
+.section-about{
+    margin-top: -10rem;
+    background-color: #eee;
+    padding-bottom: 10rem;
+}
+
+.section-feature {
+    background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8)),
+      url('../../img/nat-4.jpg');
+    background-size: cover;
+    transition:all .10s;
+    padding: 20rem 0;
+    /*margin-top: -15rem;
+      clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);*/
+    transform: skewY(-7deg); 
+    margin-top: -10rem;
+
+    &>*{
+        transform: skewY(7deg);
+    }
+}
+
+.section-tour{
+    background-color: #eee;
+    padding: 20rem 0;
+    margin-top: -10rem ;
+}
