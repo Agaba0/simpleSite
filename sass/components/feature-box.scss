@@ -5,6 +5,7 @@
     text-align: center;
     background-color: rgba($color-white, .8);
     box-shadow: 0 1.5rem .4rem rgba($color-black, .15) ;
+    transition: all .5s;
 
     &:hover{
         transform: translateY(-.5rem) scale(1.05);

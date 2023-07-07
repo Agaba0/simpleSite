@@ -1,0 +1,60 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rm 6rem rgba($color-black, 0.1);
+  background-color: white;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: $fontSizeDefault;
+  transform: skewX(-15deg);
+
+  & > * {
+    transform: skewX(15deg);
+  }
+
+  &__image {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem);
+    position: relative;
+
+    &-picture {
+      height: 100%;
+      transform: translate(-4rem) scale(1.4);
+      transition: all 0.5s;
+    }
+  }
+
+  &_caption {
+    color: $color-white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-transform: uppercase;
+    font-size: $fontSizeDefault;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &_caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__image-picture {
+    transform: scale(1) translate(-4rem);
+    filter: blur(0.3rem) brightness(80%);
+  }
+
+  &:not(:last-child) {
+  }
+}
