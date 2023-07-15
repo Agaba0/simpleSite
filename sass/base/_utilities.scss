@@ -1,16 +1,20 @@
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .margin-bottom {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
 }
 
+.medium-marginBotton {
+  margin-bottom: 4rem !important;
+} 
+
 .small-marginBotton {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 
 .spacing-above {
-  padding-top: 4rem;
-  margin-top: 10rem;
+  padding-top: 4rem !important;
+  margin-top: 10rem !important;
 }

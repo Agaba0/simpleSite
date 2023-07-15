@@ -1,10 +1,11 @@
 // single color
+$color-grey-light: #eee;
 $color-gray: #777;
+$color-grey-dark: #999;
+
 $color-light-grey: #eee;
 $color-white: white;
 $color-black: #000;
-$color-grey-light:#eee;
-
 
 // color defination
 $color-primary: #55c57a;
@@ -17,10 +18,11 @@ $color-secondary: #ff7730;
 $color-tertiary-light: #2998ff;
 $color-tertiary: #5643fa;
 
-// grid 
+// grid
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
-$gutter-horizontal:6rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
 
-//font 
+//font
 $fontSizeDefault: 1.6rem;

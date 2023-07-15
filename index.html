@@ -13,9 +13,35 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
-    <title>Natours | Exciting tours for adventurous people</title>
+    <title>CSS CLASS</title>
   </head>
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon"> &nbsp; </span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="" class="navigation__link">About</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Lorem ip</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Lorem Ip</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">popular tours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link">book now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <header class="header">
       <div class="header__logo-box">
         <img src="./img/logo-white.png" alt="logo" class="header__logo" />
@@ -25,8 +51,8 @@
           <span class="heading-primary--main">outdoor</span>
           <span class="heading-primary--sub">is where life happens </span>
         </h1>
-        <a href="#" class="btn btn--white btn--animation">
-          DICOVER YOUR TOUR
+        <a href="" class="btn btn--white btn--animation">
+          DISCOVER YOUR TOUR
         </a>
       </div>
     </header>
@@ -59,7 +85,7 @@
               inventore quibusdam distinctio libero, obcaecati repellendus
               veniam expedita facilis in molestias?
             </p>
-            <a href="#" class="btn-text"> Learn more &rarr; </a>
+            <a href="#" class="btn-text"> Learn more &rarr;</a>
           </div>
           <div class="col-1-of-2">
             <div class="composition">
@@ -136,7 +162,7 @@
         </div>
       </section>
 
-      <section class="section-tour">
+      <section class="section-tour" id="section-tour">
         <div class="text-center margin-bottom">
           <h2 class="heading-secondary">Most popular tours.</h2>
         </div>
@@ -167,7 +193,7 @@
                     <p class="card__price-value">$297</p>
                   </div>
                   <div class="testing">
-                    <div class="btn btn--white">BOOK NOW</div>
+                    <a href="#popup" class="btn btn--white">Book now</a>
                   </div>
                 </div>
               </div>
@@ -199,7 +225,7 @@
                     <p class="card__price-value">$297</p>
                   </div>
                   <div class="testing">
-                    <div class="btn btn--white">BOOK NOW</div>
+                    <a href="#popup" class="btn btn--white">Book now</a>
                   </div>
                 </div>
               </div>
@@ -230,7 +256,7 @@
                     <p class="card__price-only">ONLY</p>
                     <p class="card__price-value">$297</p>
                   </div>
-                  <div class="btn btn--white">BOOK NOW</div>
+                  <a href="#popup" class="btn btn--white">Book now</a>
                 </div>
               </div>
             </div>
@@ -242,6 +268,13 @@
       </section>
 
       <section class="section-story">
+        <div class="bg-video">
+          <video class="bg-video_content" muted loop autoplay>
+            <source src="img/video.mp4" type="video/mp4" />
+            <source src="img/video.webm" type="video/webm" />
+            Your web do not accept this!!!
+          </video>
+        </div>
         <div class="text-center">
           <h2 class="heading-secondary margin-bottom">
             we make people genuinely happy
@@ -274,11 +307,11 @@
           <div class="story">
             <figure class="story__image">
               <img
-                src="img/nat-8.jpg"
+                src="img/nat-9.jpg"
                 alt="story image"
                 class="story__image-picture"
               />
-              <figcaption class="story_caption">Agaba Sylvester</figcaption>
+              <figcaption class="story_caption">Chimdi Atiku</figcaption>
             </figure>
             <div class="story__text">
               <h3 class="headind-tertiary">
@@ -293,8 +326,131 @@
             </div>
           </div>
         </div>
+        <div class="text-center">
+          <a href="" class="btn-text"> Read more &rarr;</a>
+        </div>
+      </section>
+
+      <section class="section-book">
+        <div class="row">
+          <div class="book">
+            <div class="book__form">
+              <form action="#" class="form">
+                <div class="medium-marginBotton">
+                  <h2 class="heading-secondary">Start booking now</h2>
+                </div>
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Full Name"
+                    id="name"
+                    required
+                  />
+                  <label for="name" class="form__label">Full Name</label>
+                </div>
+                <div class="form__group">
+                  <input
+                    type="email"
+                    class="form__input"
+                    placeholder="Email address"
+                    id="email"
+                    required
+                  />
+                  <label for="email" class="form__label">Email address</label>
+                </div>
+                <div class="form__group flexRadio">
+                  <div class="form__radio-group firstRadio">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="small"
+                      name="size"
+                    />
+                    <label for="small" class="form__radio-label"
+                      >Small tour</label
+                    >
+                  </div>
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="large"
+                      name="size"
+                    />
+                    <label for="large" class="form__radio-label"
+                      >large tour</label
+                    >
+                  </div>
+                </div>
+                <div class="form__group">
+                  <button class="btn btn--green">Next step &rarr;</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <img src="img/logo-white.png" class="footer__logo" alt="logo" />
+      </div>
+      <div class="row">
+        <div class="col-1-of-2">
+          <div class="footer__list">
+            <ul class="footer__list footer__navigation">
+              <li class="footer__item">
+                <a href="#" class="footer__link">company</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Contact us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Carrers</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Privacy</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Terms</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-1-of-2">
+          <p class="footer__copyright footer__navigation">
+            Built by <a href="#" class="footer__link">Agaba Sylvester</a> for
+            his advance css/sass.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="img/nat-8.jpg" alt="tour photo" class="popup__img" />
+          <img src="img/nat-9.jpg" alt="tour photo" class="popup__img" />
+        </div>
+        <div class="popup__right">
+          <a href="#section-tour" class="popup__close">&times;</a>
+          <h2 class="heading-secondary medium-marginBotton">
+            Start bookig now
+          </h2>
+          <h3 class="heading-tertiary small-marginBotton">
+            important &ndash; please read first
+          </h3>
+          <p class="popup__text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. I
+          </p>
+          <a href="#" class="btn btn--green">Book now</a>
+        </div>
+      </div>
+    </div>
 
     <!-- <section class="grid-test">
         <div class="row">

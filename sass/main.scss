@@ -7,13 +7,18 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/form";
 @import "components/btn";
 @import "components/card";
 @import "components/composition";
 @import "components/feature-box.scss";
 @import "components/story.scss";
+@import "components/bg-video";
 
+@import "layout/popup";
+@import "layout/navigation";
 @import "layout/grid";
 @import "layout/header";
+@import "layout/footer";
 
 @import "pages/home";

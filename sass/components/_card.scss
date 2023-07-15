@@ -3,19 +3,19 @@
   perspective: 150rem;
   height: 52rem;
   position: relative;
-  background-color: $color-white;
   overflow: hidden;
   border-radius: 0.7rem;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
   .card-side {
     height: 52rem;
     transition: all 0.8s ease;
     position: absolute;
+    background-color: $color-white;
     top: 0;
     left: 0;
     width: 100%;
     backface-visibility: hidden;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     //THREE FLIP IMAGE COLOR
     &_Bimage-1 {
@@ -151,10 +151,7 @@
   }
 
   &__cta {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
+    @include absCenter;
     text-align: center;
     width: 90%;
   }
@@ -170,6 +167,50 @@
     &-value {
       font-size: 6rem;
       font-weight: 100;
+    }
+  }
+
+  @include respond(tab-port) {
+    height: auto;
+    overflow: hidden;
+    border-radius: 0.7rem;
+    background-color: white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    .card-side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+      //THREE FLIP IMAGE COLOR
+      &_back {
+        transform: rotateY(0deg);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    &:hover &-side_front {
+      transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__price {
+      margin-bottom: 3rem;
+
+      &-value {
+        font-size: 4rem;
+      }
     }
   }
 }
